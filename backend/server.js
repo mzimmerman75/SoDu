@@ -14,8 +14,8 @@ app.use(express.json());
 // connect to mongodb
 connectDB();
 
-// first route for user
-// app.use('/api', userRoutes);
+// user routes
+app.use('/api', userRoutes);
 
 // home route
 app.get("/", (req, res) => {
