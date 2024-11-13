@@ -3,6 +3,8 @@ import path from 'path';
 import dotenv from 'dotenv';
 import connectDB from './db.js';
 import userRoutes from './routes/userRoutes.js';
+import teamRoutes from './routes/teamRoutes.js';
+// import taskRoutes from './routes/taskRoutes.js';
 
 dotenv.config();
 const app = express();
@@ -16,6 +18,8 @@ connectDB();
 
 // user routes
 app.use('/api', userRoutes);
+// team routes
+app.use('/api', teamRoutes);
 
 // home route
 app.get("/", (req, res) => {
