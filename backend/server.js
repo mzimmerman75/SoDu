@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import connectDB from './db.js';
 import userRoutes from './routes/userRoutes.js';
 import teamRoutes from './routes/teamRoutes.js';
+import taskRoutes from './routes/taskRoutes.js';
 // import taskRoutes from './routes/taskRoutes.js';
 
 dotenv.config();
@@ -20,6 +21,8 @@ connectDB();
 app.use('/api', userRoutes);
 // team routes
 app.use('/api', teamRoutes);
+// task routes
+app.use('/api', taskRoutes);
 
 // home route
 app.get("/", (req, res) => {

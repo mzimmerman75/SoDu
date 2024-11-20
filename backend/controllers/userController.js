@@ -70,23 +70,6 @@ const getUser = async (req, res) => {
   }
 };
 
-// user registration
-/*
-const registerUser = async(req, res) => {
-  const { username, email, password } = req.body;
-
-  try {
-    const hashedPassword = await bycrypt.hash(password, 10);
-    const newUser = new User({ username, email, password: hashedPassword });
-    await newUser.save();
-
-    res.status(201).json({ message: 'User creation success'});
-  } catch (err) {
-    res.status(500).json({ message: 'server error' });
-  }
-};
-*/
-
 // user login
 const loginUser = async(req, res) => {
   const { email, password } = req.body;
